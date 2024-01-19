@@ -6,6 +6,8 @@ import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import VideoBb from "../src/assets/video.mp4";
 import "./styles.css";
 const App = () => {
+  const targetDate = new Date("February 9, 2024 00:00:00").getTime();
+
   return (
     <section className="page">
       {}
@@ -13,17 +15,19 @@ const App = () => {
       {}
       <video src={VideoBb} autoPlay loop muted></video>
       <div className="page__content">
-        <h1>Launching Soon</h1>
-        <h3>sarasa</h3>
+        <h1>Code for 30 days challenge</h1>
+        <h3>
+          A website a day is my daily goal! <br />
+          Will I achieve it?
+        </h3>
         <FlipClockCountdown
-          to={new Date().getTime() + 24 * 3600 * 1000 + 5000}
+          to={targetDate}
           className="flip-clock"
           labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
           duration={0.5}
         >
-          Finished
+          ✨Congratulations on reaching 30 days of the challenge!🎉
         </FlipClockCountdown>
-        <button className="btn "> Notify Me </button>
       </div>
     </section>
   );
